@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="module"></script>
+    <title>Pop-Up Notification Demo</title>
+</head>
+
+<body>
+    <h1>Pop-Up Notification Demo</h1>
+    <main>
+        <section>
+            <h2>Simple To Implement</h2>
+            <pre><code></code></pre>
+            <template><popup-notif opened>
+    <strong slot="title">Important Notfication</strong>
+</popup-notif></template>
+            <button class="live">&gt; Display</button>
+        </section>
+        <section>
+            <h2>At least describe it</h2>
+            <pre><code></code></pre>
+            <template><popup-notif opened>
+    <strong slot="title">Battery Level Low</strong>
+    <span slot="description">Please charge your device.</span>
+</popup-notif></template>
+            <button class="live">&gt; Display</button>
+        </section>
+        <section>
+            <h2>Using JS</h2>
+            <pre><code></code></pre>
+            <template><popup-notif id="jspop">
+    <strong slot="title">You NEED Javscript</strong>
+</popup-notif>
+</template>
+<pre><code>&lt;script&gt;document.querySelector("#jspop").open();&lt;/script&gt;</code></pre>
+            <button class="live" id="script1">&gt; Display</button>
+        </section>
+        <section>
+            <h2>Self-Destruct</h2>
+            <pre><code></code></pre>
+            <template><popup-notif opened duration="0.5">
+    <strong slot="title">Gotta go Fast</strong>
+</popup-notif></template>
+            <button class="live">&gt; Display</button>
+        </section>
+        <section>
+            <h2>Icons</h2>
+            <pre><code></code></pre>
+            <template><popup-notif opened>
+    <img slot="icon" src="https://solarsystem.nasa.gov/system/basic_html_elements/11561_Sun.png" alt="sun cartoon">
+    <strong slot="title">This is too bright</strong>
+    <span slot="description">Lower your brightness please I beg you.</span>
+</popup-notif></template>
+            <button class="live">&gt; Display</button>
+        </section>
+    </main>
+</body>
+
+</html>
