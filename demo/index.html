@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" type="module"></script>
+    <script src="../src/adhami-toast.js" type="module"></script>
     <title>Pop-Up Notification Demo</title>
 </head>
 
@@ -16,26 +17,26 @@
         <section>
             <h2>Simple To Implement</h2>
             <pre><code></code></pre>
-            <template><popup-notif opened>
+            <template><adhami-toast opened>
     <strong slot="title">Important Notfication</strong>
-</popup-notif></template>
+</adhami-toast></template>
             <button class="live">&gt; Display</button>
         </section>
         <section>
             <h2>At least describe it</h2>
             <pre><code></code></pre>
-            <template><popup-notif opened>
+            <template><adhami-toast opened>
     <strong slot="title">Battery Level Low</strong>
     <span slot="description">Please charge your device.</span>
-</popup-notif></template>
+</adhami-toast></template>
             <button class="live">&gt; Display</button>
         </section>
         <section>
             <h2>Using JS</h2>
             <pre><code></code></pre>
-            <template><popup-notif id="jspop">
+            <template><adhami-toast id="jspop">
     <strong slot="title">You NEED Javscript</strong>
-</popup-notif>
+</adhami-toast>
 </template>
 <pre><code>&lt;script&gt;document.querySelector("#jspop").open();&lt;/script&gt;</code></pre>
             <button class="live" id="script1">&gt; Display</button>
@@ -43,19 +44,19 @@
         <section>
             <h2>Self-Destruct</h2>
             <pre><code></code></pre>
-            <template><popup-notif opened duration="0.5">
+            <template><adhami-toast opened duration="0.5">
     <strong slot="title">Gotta go Fast</strong>
-</popup-notif></template>
+</adhami-toast></template>
             <button class="live">&gt; Display</button>
         </section>
         <section>
             <h2>Icons</h2>
             <pre><code></code></pre>
-            <template><popup-notif opened>
-    <img slot="icon" src="https://solarsystem.nasa.gov/system/basic_html_elements/11561_Sun.png" alt="sun cartoon">
+            <template><adhami-toast opened>
+    <img slot="icon" src="https://solarsystem.nasa.gov/system/basic_html_elements/11561_Sun.png" alt="sun cartoon" style="height: -webkit-fill-available;">
     <strong slot="title">This is too bright</strong>
     <span slot="description">Lower your brightness please I beg you.</span>
-</popup-notif></template>
+</adhami-toast></template>
             <button class="live">&gt; Display</button>
         </section>
     </main>
